@@ -4,6 +4,7 @@
   "private": true,
   "description": "Buildless HTML client presentation for ASAP Plumbing",
   "scripts": {
+    "build": "node build.cjs",
     "start": "node server.cjs",
     "check": "node --check app.js && node --check server.cjs"
   }
