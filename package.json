@@ -1,0 +1,10 @@
+{
+  "name": "asap-plumbing-client-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Buildless HTML client presentation for ASAP Plumbing",
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node --check app.js && node --check server.cjs"
+  }
+}
