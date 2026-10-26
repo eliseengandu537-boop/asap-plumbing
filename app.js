@@ -93,7 +93,16 @@ document.querySelector('.enquiry-form').addEventListener('submit', event => {
   retry.href = url;
   retry.target = '_blank';
   retry.rel = 'noopener noreferrer';
-  retry.textContent = 'Open WhatsApp to review and send ↗';
+  retry.textContent = 'Open WhatsApp to review and send ';
+  const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  arrow.setAttribute('class', 'arrow-icon');
+  arrow.setAttribute('viewBox', '0 0 24 24');
+  arrow.setAttribute('aria-hidden', 'true');
+  arrow.setAttribute('focusable', 'false');
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'M7 17 17 7M7 7h10v10');
+  arrow.append(path);
+  retry.append(arrow);
   retry.style.textDecoration = 'underline';
   status.append(retry);
 });
